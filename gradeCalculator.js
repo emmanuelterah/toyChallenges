@@ -1,13 +1,13 @@
 
 function calculateGrade() {
-    let marks = parseFloat(prompt("Enter student marks (between 0 and 100):"));
+    let marks = parseFloat(prompt("Enter student marks (between 0 and 100):")); //Created a variable named marks that prompts user to input student marks.
 
-    if (isNaN(marks) || marks < 0 || marks > 100) {
-        alert("Please enter marks between 0 and 100.");
-        return;
+    if (isNaN(marks) || marks < 0 || marks > 100) { // Converts value into a number before testing it
+        alert("Please enter marks between 0 and 100."); // Alerts user to input marks between 0 to 100.
+        return; 
     }
 
-    let grade;
+    let grade; // Adds if/else/else if conditional statements that assigns value when either conditional statements are met.
     if (marks > 79) {
          grade = "A";
     } else if (marks >= 60 && marks <= 79) {
@@ -20,7 +20,7 @@ function calculateGrade() {
          grade = "E";
     }
 
-    alert("Student Grade: " + grade);
+    alert("Student Grade: " + grade); // Alerts user on the grade scored based on value inputed.
 }
 
-calculateGrade();
+calculateGrade(); // calls the function.
