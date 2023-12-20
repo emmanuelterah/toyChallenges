@@ -1,5 +1,5 @@
-function calculatePoints(event) { 
-    event.preventDefault(); // Prevents outputed value from defaulting to default value
+function calculatePoints(e) { 
+    e.preventDefault(); // Prevents outputed value from defaulting to default value
     const speed = parseInt(document.getElementById('speed').value);
     const speedLimit = 70; //assigns immutable value to speed Limit
     const kmPerDemeritPoint = 5; //assigns immutable value to variable kmPerDemeritPoint
@@ -19,6 +19,9 @@ function calculatePoints(event) {
     } else {
         document.getElementById('result').innerText = "Points: " + demeritPoints; //gets value inserted through id and outputs "Points" if the conditions are met
     }
+
 }
 
-console.log(calculatePoints()); //Outputs value 
+document.getElementById('yourForm').addEventListener('submit', function(e) { //Adds an event listener that calls the calculatePoints(e) when the form is submitted
+    calculatePoints(e);
+});
